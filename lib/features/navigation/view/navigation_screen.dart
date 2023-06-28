@@ -12,10 +12,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
   int _currentScreeen = 0;
   final List<Widget> _screens = [
     HomeScreen(),
-    const DiscoverScreen(),
-    const UploadScreen(),
-    const InboxScreen(),
-    const AccountScreen()
+    DiscoverScreen(),
+    UploadScreen(),
+    InboxScreen(),
+    AccountScreen()
   ];
 
   final List<String> _titles = [

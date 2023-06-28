@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'view.dart';
 
 class UploadScreen extends StatelessWidget {
   const UploadScreen({super.key});
@@ -6,7 +7,7 @@ class UploadScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("UPLOAD"),
+      child: AuthScreen(),
     );
   }
 }
