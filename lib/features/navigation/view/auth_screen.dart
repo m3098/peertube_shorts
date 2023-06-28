@@ -9,15 +9,15 @@ class AuthScreen extends StatelessWidget {
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
+        const Icon(
           Icons.login,
           size: 70,
         ),
-        Text("Create account"),
-        SizedBox(
+        const Text("Create account"),
+        const SizedBox(
           height: 10,
         ),
-        FilledButton(onPressed: () {}, child: Text("Sign up"))
+        FilledButton(onPressed: () {}, child: const Text("Sign up"))
       ],
     ));
   }
