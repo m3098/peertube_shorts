@@ -6,6 +6,6 @@ class InboxScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthScreen();
+    return const AuthScreen();
   }
 }

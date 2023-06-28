@@ -1,16 +1,38 @@
 import 'package:flutter/material.dart';
 
 class PeertubeAccountVideoList extends StatelessWidget {
-  const PeertubeAccountVideoList({
+  PeertubeAccountVideoList({
     super.key,
-    required this.colors,
   });
 
-  final List<Color> colors;
+  final List<Color> colors = [
+    Colors.red,
+    Colors.blue,
+    Colors.green,
+    Colors.yellow,
+    Colors.orange,
+    Colors.purple,
+    Colors.red,
+    Colors.blue,
+    Colors.green,
+    Colors.yellow,
+    Colors.orange,
+    Colors.purple,
+    Colors.red,
+    Colors.blue,
+    Colors.green,
+    Colors.yellow,
+    Colors.orange,
+    Colors.purple,
+    Colors.blue,
+    Colors.green,
+  ];
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       itemCount: colors.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
