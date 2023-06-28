@@ -9,13 +9,13 @@ class NavigationScreen extends StatelessWidget {
       body: HomeScreen(),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Color.fromARGB(45, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(45, 0, 0, 0),
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Discover',
           ),
@@ -25,16 +25,16 @@ class NavigationScreen extends StatelessWidget {
               width: 30,
               child: FloatingActionButton(
                 onPressed: () {},
-                child: Icon(Icons.add),
+                child: const Icon(Icons.add),
               ),
             ),
             label: '',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.mail),
             label: 'Inbox',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
             label: 'Account',
           ),
