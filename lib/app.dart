@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peertube_shorts/theme/peertube_theme.dart';
 import 'features/features.dart';
 
 class App extends StatelessWidget {
@@ -8,7 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Peertube Shorts",
-      theme: ThemeData.dark(),
+      theme: PeertubeTheme.darkTheme,
       routes: {"/": (context) => NavigationScreen()},
       initialRoute: "/",
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'view.dart';
+import '../widgets/widgets.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -44,6 +45,16 @@ class _NavigationScreenState extends State<NavigationScreen> {
         currentIndex: _currentScreeen,
         onTap: (index) => setState(() {
           _currentScreeen = index;
+
+          if (_currentScreeen >= 2) {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (BuildContext context) {
+                return AuthPopup();
+              },
+            );
+          }
         }),
         items: const [
           BottomNavigationBarItem(
