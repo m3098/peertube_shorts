@@ -20,7 +20,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   ];
 
   final List<String> _titles = [
-    "Home",
+    "videos.redeyes.site",
     "Discover",
     "",
     "Inbox",
