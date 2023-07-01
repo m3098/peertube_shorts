@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:peertube_shorts/features/navigation/widgets/widgets.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});

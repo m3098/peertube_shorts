@@ -18,7 +18,7 @@ class PeertubeVideoSubtitle extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.bodySmall),
         const SizedBox(
-          height: 60,
+          height: 70,
         )
       ],
     );

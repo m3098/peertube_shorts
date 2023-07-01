@@ -11,7 +11,7 @@ class NavigationScreen extends StatefulWidget {
 
 class _NavigationScreenState extends State<NavigationScreen> {
   int _currentScreeen = 0;
-  final List<Widget> _screens = [
+  List<Widget> _screens = [
     HomeScreen(),
     DiscoverScreen(),
     UploadScreen(),
@@ -41,7 +41,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
       body: _screens[_currentScreeen],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color.fromARGB(45, 0, 0, 0),
+        showUnselectedLabels: false,
+        backgroundColor: Colors.transparent,
         currentIndex: _currentScreeen,
         onTap: (index) => setState(() {
           _currentScreeen = index;

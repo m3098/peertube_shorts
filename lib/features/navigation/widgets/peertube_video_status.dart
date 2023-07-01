@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 import "widgets.dart";
+import '../../../services/services.dart';
 
 class PeertubeVideoStatus extends StatelessWidget {
-  const PeertubeVideoStatus({
-    super.key,
-    required String avatarUrl,
-  }) : _avatarUrl = avatarUrl;
+  final String avatarUrl;
+  final int numberOfLikes;
+  final int numberOfComments;
 
-  final String _avatarUrl;
+  const PeertubeVideoStatus(
+      {super.key,
+      required this.avatarUrl,
+      required this.numberOfLikes,
+      required this.numberOfComments});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        PeertubeVideoAvatar(avatarUrl: _avatarUrl),
+        PeertubeVideoAvatar(avatarUrl: avatarUrl),
+        SizedBox(
+          height: 10,
+        ),
         Column(
           children: [
             IconButton(
@@ -24,10 +31,13 @@ class PeertubeVideoStatus extends StatelessWidget {
                   size: 30,
                 )),
             Text(
-              "123,3",
+              ConvertNumber.convertNumber(numberOfLikes),
               style: Theme.of(context).textTheme.bodySmall,
             )
           ],
+        ),
+        SizedBox(
+          height: 10,
         ),
         Column(
           children: [
@@ -38,10 +48,13 @@ class PeertubeVideoStatus extends StatelessWidget {
                   size: 30,
                 )),
             Text(
-              "123,3",
+              ConvertNumber.convertNumber(numberOfComments),
               style: Theme.of(context).textTheme.bodySmall,
             )
           ],
+        ),
+        SizedBox(
+          height: 10,
         ),
         IconButton(
             onPressed: () {},

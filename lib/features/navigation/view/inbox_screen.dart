@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'view.dart';
 
 class InboxScreen extends StatelessWidget {
   InboxScreen({super.key});
