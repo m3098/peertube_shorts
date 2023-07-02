@@ -14,6 +14,9 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider<NavigationScreenBloc>(
           create: (context) => NavigationScreenBloc(),
+        ),
+        BlocProvider<HomeScreenBloc>(
+          create: (context) => HomeScreenBloc(),
         )
       ],
       child: MaterialApp(

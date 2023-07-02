@@ -31,8 +31,10 @@ class _PeertubeVideoPlayerState extends State<PeertubeVideoPlayer> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Chewie(
-              controller: widget.chewieController,
+            Expanded(
+              child: Chewie(
+                controller: widget.chewieController,
+              ),
             ),
             if (!widget.chewieController.isPlaying)
               Icon(
