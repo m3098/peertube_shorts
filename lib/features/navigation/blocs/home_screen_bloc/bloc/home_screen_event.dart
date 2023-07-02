@@ -13,6 +13,9 @@ class LoadVideoList extends HomeScreenEvent {
 }
 
 class AddVideo extends HomeScreenEvent {
+  final int startIndex;
+
+  AddVideo({required this.startIndex});
   @override
   List<Object?> get props => throw UnimplementedError();
 }

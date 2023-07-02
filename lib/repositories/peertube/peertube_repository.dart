@@ -24,7 +24,7 @@ class PeertubeRepository implements AbstractPeertubeRepository {
         "&hasHLSFiles=$hasHLSFiles" +
         "&isLive=$isLive" +
         "&isLocal=$isLocal" +
-        "&nsfw$nsfw" +
+        "&nsfw=$nsfw" +
         "&start=$start";
     if (tagsOneOf.isNotEmpty) {
       for (var element in tagsOneOf) {

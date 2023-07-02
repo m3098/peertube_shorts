@@ -12,26 +12,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeScreenBloc, HomeScreenState>(
       builder: (context, state) {
-        print(state.toString);
         if (state is HomeScreenInitial) {
           BlocProvider.of<HomeScreenBloc>(context).add(LoadVideoList());
           return Center(
             child: CircularProgressIndicator(),
           );
         } else if (state is HomeLoaded) {
-          List<PeertubeVideoModel> videos = state.videoList;
-          List<ChewieController> _chewieControllers = state.chewieControllers;
-
           return PageView.builder(
             scrollDirection: Axis.vertical,
-            itemCount: _chewieControllers.length + 1,
+            itemCount: state.chewieControllers.length + 1,
             physics: PageScrollPhysics(),
             itemBuilder: (context, index) {
-              if (index != _chewieControllers.length) {
+              if (index != state.chewieControllers.length) {
                 return Stack(
                   children: [
                     PeertubeVideoPlayer(
-                      chewieController: _chewieControllers[index]..play(),
+                      chewieController: state.chewieControllers[index]..play(),
                     ),
                     Align(
                       alignment: Alignment.centerRight,
@@ -47,7 +43,8 @@ class HomeScreen extends StatelessWidget {
                   ],
                 );
               } else {
-                BlocProvider.of<HomeScreenBloc>(context).add(AddVideo());
+                BlocProvider.of<HomeScreenBloc>(context)
+                    .add(AddVideo(startIndex: index));
                 return Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
